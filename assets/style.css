@@ -1,0 +1,165 @@
+/* ===== HEROIC SPIDER THEME — individual program pages ===== */
+:root {
+  --a: #e0121b; /* hero red */
+  --b: #ff3b3b; /* bright red accent */
+  --bg: #07070a;
+  --c: #121014;
+  --t: #f2f2f2;
+  --line: #33141a;
+}
+body.light {
+  --bg: #f5f0f0;
+  --c: #fff;
+  --t: #161010;
+  --line: #e3caca;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font:
+    16px/1.6 system-ui,
+    sans-serif;
+  background:
+    radial-gradient(
+      ellipse 700px 500px at -10% -10%,
+      #3a0206 0%,
+      transparent 55%
+    ),
+    var(--bg);
+  color: var(--t);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+.wrap {
+  width: min(720px, 100%);
+  height: fit-content;
+  background: var(--c);
+  border: 1px solid var(--line);
+  padding: 30px;
+  position: relative;
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
+  box-shadow: 0 25px 70px #000a;
+}
+.wrap::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='%23ff3b3b' stroke-width='6' stroke-linecap='round'><ellipse cx='50' cy='56' rx='13' ry='19' fill='%23ff3b3b' stroke='none'/><circle cx='50' cy='31' r='8' fill='%23ff3b3b' stroke='none'/><path d='M50 39 L50 60'/><path d='M39 44 L16 29'/><path d='M38 51 L9 46'/><path d='M38 59 L9 64'/><path d='M41 66 L20 81'/><path d='M61 44 L84 29'/><path d='M62 51 L91 46'/><path d='M62 59 L91 64'/><path d='M59 66 L80 81'/></g></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.85;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  -webkit-text-stroke: 1px #4a0006;
+  text-shadow:
+    0 0 10px #ff2d2d88,
+    0 3px 0 #7a0206;
+}
+p.d {
+  opacity: 0.75;
+  margin: 6px 0 20px;
+  color: #e6cccc;
+}
+nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+a.btn,
+button {
+  background: linear-gradient(135deg, var(--a), #8c0007);
+  color: #fff;
+  border: 0;
+  padding: 10px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  box-shadow: 0 0 0 1px #ff3b3b55 inset;
+  transition: 0.2s;
+}
+button:hover,
+a.btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 18px var(--b);
+}
+input,
+select,
+textarea {
+  background: var(--bg);
+  color: var(--t);
+  border: 1px solid var(--line);
+  padding: 10px;
+  font: inherit;
+  width: 100%;
+  margin: 6px 0;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--a);
+  box-shadow: 0 0 0 2px #e0121b44;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.out {
+  margin-top: 14px;
+  padding: 12px;
+  background: var(--bg);
+  min-height: 44px;
+  border: 1px dashed var(--line);
+}
+.big {
+  font-size: 44px;
+  text-align: center;
+  color: var(--b);
+  text-shadow: 0 0 16px #ff3b3b66;
+}
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.row > * {
+  flex: 1;
+}
+.err {
+  color: #ff6b6b;
+  font-size: 14px;
+}
+li {
+  margin: 6px 0;
+}
